@@ -1,4 +1,5 @@
-export { Ball as BallCanvas } from "./ball";
-export { Computers as ComputersCanvas } from "./computers";
-export { Earth as EarthCanvas } from "./earth";
-export { Stars as StarsCanvas } from "./stars";
+export { BallCanvas } from "./ball";
+export { ComputersCanvas } from "./computers";
+export { EarthCanvas } from "./earth";
+export { StarsCanvas } from "./stars";
+

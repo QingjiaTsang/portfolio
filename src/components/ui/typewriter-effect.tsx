@@ -96,6 +96,7 @@ export function TypewriterEffect({
         )}
       >
       </motion.span>
+
     </div>
   );
 }
@@ -109,6 +110,8 @@ type TypewriterEffectSmoothProps = {
   cursorClassName?: string;
   duration?: number;
   initialDelay?: number;
+  hideCursorAfterComplete?: boolean;
+  showCursorAfterDelay?: boolean;
 };
 
 export function TypewriterEffectSmooth({
@@ -117,6 +120,8 @@ export function TypewriterEffectSmooth({
   cursorClassName,
   duration = 1,
   initialDelay = 0,
+  hideCursorAfterComplete = false,
+  showCursorAfterDelay = false,
 }: TypewriterEffectSmoothProps) {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -172,15 +177,17 @@ export function TypewriterEffectSmooth({
           opacity: 0,
         }}
         animate={{
-          opacity: 1,
+          opacity: hideCursorAfterComplete ? [1, 1, 0] : 1,
         }}
         transition={{
           duration: 0.8,
-          repeat: Infinity,
+          repeat: hideCursorAfterComplete ? 0 : Infinity,
           repeatType: "reverse",
+          delay: showCursorAfterDelay ? initialDelay : 0,
+          times: hideCursorAfterComplete ? [0, 0.99, 0.999] : undefined,
         }}
         className={cn(
-          "block rounded-sm w-1 h-4 sm:h-6 md:h-8 bg-blue-500",
+          "block rounded-sm w-1 h-[18px] sm:h-6 md:h-7 lg:h-8 mt-1 bg-blue-500",
           cursorClassName,
         )}
       >

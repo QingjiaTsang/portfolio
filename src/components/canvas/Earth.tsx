@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Earth() {
+export function EarthCanvas() {
   return (
     <div>Earth</div>
   );

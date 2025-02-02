@@ -1,7 +1,4 @@
-import React from "react";
 
-export function Ball() {
-  return (
-    <div>Ball</div>
-  );
+export function BallCanvas() {
+  return <div>Ball</div>;
 }

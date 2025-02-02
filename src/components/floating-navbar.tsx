@@ -24,7 +24,6 @@ type FloatingNavProps = {
   className?: string;
 };
 
-// TODO: implement mobile response
 export function FloatingNav({ navItems, className }: FloatingNavProps) {
   const { scrollYProgress } = useScroll();
 

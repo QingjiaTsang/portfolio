@@ -1,6 +1,5 @@
-import React from "react";
 
-export function Stars() {
+export function StarsCanvas() {
   return (
     <div>Stars</div>
   );
