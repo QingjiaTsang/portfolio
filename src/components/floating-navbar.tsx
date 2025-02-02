@@ -9,9 +9,11 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
+import { MobileNav } from "@/components/mobile-nav";
+import { ProgressBar } from "@/components/progress-bar";
 import { cn } from "@/lib/utils";
 
-type NavItem = {
+export type NavItem = {
   name: string;
   link: string;
   icon?: JSX.Element;
@@ -47,16 +49,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
 
   return (
     <AnimatePresence>
-      <motion.div
-        key="progress-bar"
-        className={cn("fixed top-0 left-0 right-0 h-0.5 bg-slate-500 origin-left")}
-        transition={{
-          ease: "easeInOut",
-        }}
-        style={{
-          scaleX: scrollYProgress,
-        }}
-      />
+      <ProgressBar />
       <motion.div
         key="nav-container"
         initial={{
@@ -73,13 +66,13 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
           stiffness: 80,
         }}
         className={cn(
-          "fixed z-[999] top-5 inset-x-0 mx-auto",
+          "fixed z-[999] top-5",
           "flex items-center justify-center",
           "max-w-fit",
-          "px-6 py-3",
-          "rounded-xl",
+          "sm:px-6 sm:py-3 ",
+          "rounded-xl shadow-2xl",
           "border border-white/[0.04]",
-          "shadow-2xl",
+          "right-5 sm:inset-x-0 sm:mx-auto",
           className,
         )}
         style={{
@@ -87,24 +80,33 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
           background: "linear-gradient(90deg,#161a31,#06091f)",
         }}
       >
-        {navItems.map(navItem => (
-          <Link
-            key={`nav-item-${navItem.name}`}
-            href={navItem.link}
-            className={cn(
-              "relative px-3 py-1.5",
-              "text-sm font-normal",
-              "text-slate-300/80 hover:text-white/90",
-              "transition-all duration-300",
-              "rounded-lg",
-              "hover:bg-white/[0.04]",
-              "hover:shadow-[0_0_10px_rgba(168,85,247,0.08)]",
-            )}
-          >
-            <span>{navItem.icon}</span>
-            <span>{navItem.name}</span>
-          </Link>
-        ))}
+
+        {/* Desktop */}
+        <div className="hidden justify-center gap-2 sm:flex">
+          {navItems.map(navItem => (
+            <Link
+              key={`nav-item-${navItem.name}`}
+              href={navItem.link}
+              className={cn(
+                "relative px-3 py-1.5",
+                "text-sm font-normal",
+                "text-slate-300/80 hover:text-white/90",
+                "transition-all duration-300",
+                "rounded-lg",
+                "hover:bg-white/[0.04]",
+                "hover:shadow-[0_0_10px_rgba(168,85,247,0.08)]",
+              )}
+            >
+              <span>{navItem.icon}</span>
+              <span>{navItem.name}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile */}
+        <div className="sm:hidden">
+          <MobileNav navItems={navItems} />
+        </div>
       </motion.div>
     </AnimatePresence>
   );

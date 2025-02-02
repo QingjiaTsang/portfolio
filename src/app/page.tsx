@@ -56,7 +56,6 @@ export default function Home() {
         <Contact />
         <StarsCanvas />
       </div>
-      <div className="h-screen bg-custom-primary"></div>
     </div>
   );
 }
