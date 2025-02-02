@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Stars = () => {
+export function Stars() {
   return (
     <div>Stars</div>
-  )
+  );
 }
-
-export default Stars

@@ -1,24 +1,9 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
-import Hero from './Hero';
-import Navbar from './Navbar';
-import About from './About';
-import Tech from './Tech';
-import Experience from './Experience';
-import Works from './Works';
-import Feedbacks from './Feedbacks';
-import Contact from './Contact';
-
-export {
-  Hero,
-  Navbar,
-  About,
-  Tech,
-  Experience,
-  Works,
-  Feedbacks,
-  Contact,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
-  StarsCanvas
-}
+export { About } from "./about";
+export { BallCanvas, ComputersCanvas, EarthCanvas, StarsCanvas } from "./canvas";
+export { Contact } from "./contact";
+export { Experience } from "./experience";
+export { Feedbacks } from "./feed-backs";
+export { Hero } from "./hero";
+export { Tech } from "./tech";
+export { Works } from "./works";
+export { FloatingNav } from "@/components/floating-navbar";

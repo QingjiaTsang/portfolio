@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Earth = () => {
+export function Earth() {
   return (
     <div>Earth</div>
-  )
+  );
 }
-
-export default Earth
