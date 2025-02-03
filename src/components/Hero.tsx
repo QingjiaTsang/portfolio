@@ -34,7 +34,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: "Frontend Developer",
+                  text: "Fullstack Developer",
                   className: "text-white",
                 },
               ]}
@@ -43,7 +43,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: "with passion to build web app",
+                  text: "Building modern web applications",
                   className: "text-white",
                 },
               ]}
@@ -54,11 +54,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -mt-3">
         <ComputersCanvas />
-
       </div>
-        <ScrollIndicator href="#about" />
+
+      <ScrollIndicator href="#about" />
     </section>
   );
 }

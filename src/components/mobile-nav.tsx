@@ -1,6 +1,7 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -10,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 import type { NavItem } from "./floating-navbar";
 
@@ -18,8 +20,10 @@ type MobileNavProps = {
 };
 
 export function MobileNav({ navItems }: MobileNavProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger
         className={cn(
           "size-10 p-0 flex items-center justify-center",
@@ -28,7 +32,21 @@ export function MobileNav({ navItems }: MobileNavProps) {
           "transition-colors duration-300",
         )}
       >
-        <Menu className="size-5 text-slate-300" />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={isOpen ? "close" : "open"}
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: 90 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+          >
+            {isOpen ? (
+              <X className="size-5 text-slate-300" />
+            ) : (
+              <Menu className="size-5 text-slate-300" />
+            )}
+          </motion.div>
+        </AnimatePresence>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
