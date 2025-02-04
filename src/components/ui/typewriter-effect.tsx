@@ -167,6 +167,7 @@ export function TypewriterEffectSmooth({
           delay: initialDelay,
           ease: "linear",
         }}
+        viewport={{ once: true }}
       >
         <div className="whitespace-nowrap text-base font-bold sm:text-xl md:text-2xl lg:text-3xl">
           {renderWords()}

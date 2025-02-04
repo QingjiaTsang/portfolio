@@ -47,6 +47,7 @@ export function TextGenerateEffect({
           style={{
             filter: filter ? "blur(10px)" : "none",
           }}
+          viewport={{ once: true }}
         >
           {word}
           <span className="inline-block">&nbsp;</span>
@@ -62,6 +63,7 @@ export function TextGenerateEffect({
           style={{
             filter: filter ? "blur(10px)" : "none",
           }}
+          viewport={{ once: true }}
         >
           {word}
           <span className="inline-block">&nbsp;</span>

@@ -5,12 +5,12 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-import creator from "./creator.png";
 import github from "./github.png";
 import jobit from "./jobit.png";
 import logo from "./logo.svg";
 import menu from "./menu.svg";
-import mobile from "./mobile.png";
+import quickLearner from "./quick_learner.png";
+import techEnthusiast from "./tech_enthusiast.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -31,12 +31,13 @@ import web from "./web.png";
 const baseImages = {
   logo,
   backend,
-  creator,
-  mobile,
+  quickLearner,
+  techEnthusiast,
   web,
   github,
   menu,
   close,
+
 } as const;
 
 // 技术栈图标
@@ -85,14 +86,13 @@ export {
   // Project images
   carrent,
   close,
-  creator,
   // Tech stack images
   css,
   docker,
   figma,
   git,
-
   github,
+
   html,
   javascript,
   jobit,
@@ -101,15 +101,16 @@ export {
   menu,
   // Company images
   meta,
-  mobile,
   mongodb,
   nodejs,
+  quickLearner,
   reactjs,
   redux,
   shopify,
-
   starbucks,
+
   tailwind,
+  techEnthusiast,
   tesla,
   threejs,
 

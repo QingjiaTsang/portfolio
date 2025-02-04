@@ -1,11 +1,11 @@
-import { About, Contact, Experience, Feedbacks, StarsCanvas, Tech, Works } from "@/components";
+import { About, Contact, Experience, StarsCanvas, Tech, Works } from "@/components";
+import { Hero } from "@/components/feature/hero";
 import { FloatingNav } from "@/components/floating-navbar";
-import { Hero } from "@/components/hero";
 
 export default function Home() {
   // TODO: dummy
   const navItems = [
-    { name: "About", link: "/about" },
+    { name: "About", link: "#about" },
     { name: "Experience", link: "/experience" },
     { name: "Tech", link: "/tech" },
     { name: "Works", link: "/works" },
@@ -13,7 +13,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative bg-custom-primary">
+    <div className="relative min-h-dvh bg-custom-primary">
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <FloatingNav navItems={navItems} />
         <Hero />
@@ -22,7 +22,6 @@ export default function Home() {
       <Experience />
       <Tech />
       <Works />
-      <Feedbacks />
       <div className="relative z-0">
         <Contact />
         <StarsCanvas />

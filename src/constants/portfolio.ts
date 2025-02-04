@@ -1,7 +1,6 @@
 import {
   backend,
   carrent,
-  creator,
   css,
   docker,
   figma,
@@ -10,14 +9,15 @@ import {
   javascript,
   jobit,
   meta,
-  mobile,
   mongodb,
   nodejs,
+  quickLearner,
   reactjs,
   redux,
   shopify,
   starbucks,
   tailwind,
+  techEnthusiast,
   tesla,
   threejs,
   tripguide,
@@ -46,16 +46,16 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Quick Learner",
+    icon: quickLearner,
+  },
+  {
+    title: "Tech Enthusiast",
+    icon: techEnthusiast,
   },
 ];
 

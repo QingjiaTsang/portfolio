@@ -6,11 +6,11 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import Link from "next/link";
+import { useLenis } from "lenis/react";
 import { useState } from "react";
 
 import { MobileNav } from "@/components/mobile-nav";
-import { ProgressBar } from "@/components/progress-bar";
+import { ScrollProgressBar } from "@/components/scroll-progress-bar";
 import { cn } from "@/lib/utils";
 
 export type NavItem = {
@@ -27,8 +27,13 @@ type FloatingNavProps = {
 export function FloatingNav({ navItems, className }: FloatingNavProps) {
   const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(true);
+  const lenis = useLenis();
 
+  const handleNavigate = (href: string) => {
+    lenis?.scrollTo(href);
+  };
+
+  const [visible, setVisible] = useState(true);
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     const isScrollingDown = current! - scrollYProgress.getPrevious()! > 0;
 
@@ -48,7 +53,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
 
   return (
     <AnimatePresence>
-      <ProgressBar />
+      <ScrollProgressBar />
       <motion.div
         key="nav-container"
         initial={{
@@ -83,9 +88,10 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
         {/* Desktop */}
         <div className="hidden justify-center gap-2 sm:flex">
           {navItems.map(navItem => (
-            <Link
+            <button
+              type="button"
               key={`nav-item-${navItem.name}`}
-              href={navItem.link}
+              onClick={() => handleNavigate(navItem.link)}
               className={cn(
                 "relative px-3 py-1.5",
                 "text-sm font-normal",
@@ -98,7 +104,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
             >
               <span>{navItem.icon}</span>
               <span>{navItem.name}</span>
-            </Link>
+            </button>
           ))}
         </div>
 
