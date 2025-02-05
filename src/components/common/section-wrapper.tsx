@@ -14,7 +14,7 @@ export function SectionWrapper(Component: React.ComponentType, idName: string) {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
         >
-          <div id={idName} className="py-4" />
+          <div id={idName} className="py-2.5" />
 
           <Component />
         </motion.section>

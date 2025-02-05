@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/general-sans");
 
 @tailwind base;
 @tailwind components;
@@ -267,7 +268,7 @@
   }
 
   .nav-li {
-    @apply max-sm:hover:bg-black-500 py-2 font-sans text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md max-sm:px-5;
+    @apply max-sm:hover:bg-black-500 font-generalsans py-2 text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md max-sm:px-5;
   }
 
   .nav-li_a {
@@ -284,7 +285,7 @@
 
   /* button component */
   .btn {
-    @apply bg-custom-black-300 mx-auto flex cursor-pointer items-center justify-center gap-4 rounded-md p-3 text-white transition-all active:scale-95;
+    @apply mx-auto flex cursor-pointer items-center justify-center gap-4 rounded-md bg-custom-black-300 p-3 text-white transition-all active:scale-95;
   }
 
   .btn-ping {
@@ -297,20 +298,20 @@
 
   /* hero section */
   .hero_tag {
-    @apply text-center font-sans text-3xl font-black !leading-normal sm:text-4xl md:text-5xl xl:text-6xl;
+    @apply font-generalsans text-center text-3xl font-black !leading-normal sm:text-4xl md:text-5xl xl:text-6xl;
   }
 
   /* about section */
   .grid-container {
-    @apply border-custom-black-300 flex h-full w-full flex-col gap-5 rounded-lg border bg-custom-black-200 p-4 sm:p-7;
+    @apply flex h-full w-full flex-col gap-5 rounded-lg border border-custom-black-300 bg-custom-black-200 p-4 sm:p-7;
   }
 
   .grid-headtext {
-    @apply mb-2 font-sans text-xl font-semibold text-white;
+    @apply font-generalsans mb-2 text-xl font-semibold text-white;
   }
 
   .grid-subtext {
-    @apply font-sans text-base text-[#afb0b6];
+    @apply font-generalsans text-base text-[#afb0b6];
   }
 
   .copy-container {
@@ -345,23 +346,23 @@
   }
 
   .work-canvas {
-    @apply border-custom-black-300 col-span-1 rounded-lg border bg-custom-black-200;
+    @apply col-span-1 rounded-lg border border-custom-black-300 bg-custom-black-200;
   }
 
   .work-content {
-    @apply border-custom-black-300 col-span-2 rounded-lg border bg-custom-black-200;
+    @apply col-span-2 rounded-lg border border-custom-black-300 bg-custom-black-200;
   }
 
   .work-content_container {
-    @apply hover:bg-custom-black-300 grid cursor-pointer grid-cols-[auto_1fr] items-start gap-5 rounded-lg px-2.5 transition-all duration-500 ease-in-out sm:px-5;
+    @apply grid cursor-pointer grid-cols-[auto_1fr] items-start gap-5 rounded-lg px-2.5 transition-all duration-500 ease-in-out hover:bg-custom-black-300 sm:px-5;
   }
 
   .work-content_logo {
-    @apply bg-custom-black-600 h-16 w-16 rounded-3xl p-2;
+    @apply h-16 w-16 rounded-3xl bg-custom-black-600 p-2;
   }
 
   .work-content_bar {
-    @apply bg-custom-black-300 group-hover:bg-custom-black-500 mt-4 h-full w-0.5 flex-1 group-last:hidden;
+    @apply mt-4 h-full w-0.5 flex-1 bg-custom-black-300 group-last:hidden group-hover:bg-custom-black-500;
   }
 
   /* contact section */
@@ -370,15 +371,15 @@
   }
 
   .field-label {
-    @apply text-custom-white-600 text-lg;
+    @apply text-lg text-custom-white-600;
   }
 
   .field-input {
-    @apply bg-custom-black-300 placeholder:text-custom-white-500 text-custom-white-800 min-h-14 w-full rounded-lg px-5 py-2 text-lg shadow-2xl shadow-custom-black-200 focus:outline-none;
+    @apply min-h-14 w-full rounded-lg bg-custom-black-300 px-5 py-4 text-lg text-custom-white-800 shadow-2xl shadow-custom-black-200 placeholder:text-custom-white-500 focus:outline-none;
   }
 
   .field-btn {
-    @apply bg-custom-black-500 flex min-h-12 items-center justify-center gap-3 rounded-lg px-5 py-2 text-lg text-white shadow-2xl shadow-custom-black-200;
+    @apply flex min-h-12 items-center justify-center gap-3 rounded-lg bg-custom-black-500 px-5 py-2 text-lg text-white shadow-2xl shadow-custom-black-200;
   }
 
   .field-btn_arrow {
@@ -387,6 +388,6 @@
 
   /*  footer */
   .social-icon {
-    @apply bg-custom-black-300 flex h-12 w-12 items-center justify-center rounded-full border border-custom-black-200;
+    @apply flex h-12 w-12 items-center justify-center rounded-full border border-custom-black-200 bg-custom-black-300;
   }
 }

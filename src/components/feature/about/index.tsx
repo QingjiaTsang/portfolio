@@ -8,7 +8,7 @@ import { TagCard } from "@/components/feature/about/tag-card";
 import { services } from "@/constants";
 import { fadeIn, textVariant } from "@/lib/motion";
 
-function AboutComponent() {
+export function AboutComponent() {
   return (
     <div>
       <motion.div variants={textVariant(0.5)}>

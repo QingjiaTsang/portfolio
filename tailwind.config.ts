@@ -21,9 +21,9 @@ const config: Config = {
             DEFAULT: "#000",
             100: "#100d25",
             200: "#090325",
-            300: "#151030",
+            300: "#1C1C21",
             400: "#1d1836",
-            500: "#2a2347",
+            500: "#3A3A49",
             600: "#342b56",
           },
           white: {
@@ -112,6 +112,9 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        generalsans: ['General Sans', 'sans-serif'],
       },
     },
   },
