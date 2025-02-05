@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 
 import { SectionWrapper } from "@/components/common/section-wrapper";
-import { ServiceCard } from "@/components/feature/about/service-card";
+import ProfileGrids from "@/components/feature/about/profile-grids";
+import { TagCard } from "@/components/feature/about/tag-card";
 import { services } from "@/constants";
 import { fadeIn, textVariant } from "@/lib/motion";
 
 function AboutComponent() {
   return (
-    <div className="min-h-[70dvh]">
+    <div>
       <motion.div variants={textVariant(0.5)}>
         <p className="text-[14px] uppercase tracking-wider text-custom-secondary sm:text-[18px]">Introduction</p>
         <h2 className="text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]">Overview.</h2>
@@ -19,17 +20,20 @@ function AboutComponent() {
         variants={fadeIn("left", "spring", 0.1, 1)}
         className="mt-4 max-w-3xl text-[17px] leading-[30px] text-custom-secondary"
       >
-        我是一名资深的全栈开发工程师，拥有丰富的 Web 开发经验。
-        专注于创建高性能、可扩展的应用程序，并且热衷于使用最新的技术栈。
-        我擅长前端开发，在使用 Next.js, Hono.js 构建全栈应用以及云服务部署方面积累了丰富经验，
-        始终保持对新技术的学习热情，致力于提供最佳的技术解决方案。
+        I'm a Full Stack Developer with extensive experience in web development.
+        I specialize in building high-performance, scalable applications and stay passionate about emerging technologies.
+        With expertise in frontend development and a strong background in building full-stack applications using Next.js and Hono.js,
+        I also have solid experience in cloud deployment. I maintain a constant drive for learning new technologies
+        and am dedicated to delivering optimal technical solutions.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <TagCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
+      <ProfileGrids />
     </div>
   );
 }

@@ -14,7 +14,7 @@ type ServiceCardProps = {
   icon: StaticImageData;
 };
 
-export function ServiceCard({ index, title, icon }: ServiceCardProps) {
+export function TagCard({ index, title, icon }: ServiceCardProps) {
   return (
     <Tilt
       perspective={500}
@@ -23,7 +23,6 @@ export function ServiceCard({ index, title, icon }: ServiceCardProps) {
       glarePosition="all"
       glareBorderRadius="20px"
       scale={1.02}
-      className="w-full xs:w-[250px]"
     >
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}

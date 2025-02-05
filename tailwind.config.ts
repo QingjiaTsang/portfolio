@@ -14,12 +14,25 @@ const config: Config = {
     extend: {
       colors: {
         custom: {
-          "primary": "#050816",
-          "secondary": "#aaa6c3",
-          "tertiary": "#151030",
-          "black-100": "#100d25",
-          "black-200": "#090325",
-          "white-100": "#f3f3f3",
+          primary: "#050816",
+          secondary: "#aaa6c3",
+          tertiary: "#151030",
+          black: {
+            DEFAULT: "#000",
+            100: "#100d25",
+            200: "#090325",
+            300: "#151030",
+            400: "#1d1836",
+            500: "#2a2347",
+            600: "#342b56",
+          },
+          white: {
+            DEFAULT: "#FFFFFF",
+            800: "#E4E4E6",
+            700: "#D6D9E9",
+            600: "#AFB0B6",
+            500: "#62646C",
+          },
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

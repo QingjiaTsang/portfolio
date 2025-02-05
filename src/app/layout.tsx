@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
+import { ReactLenis } from "lenis/react";
 import localFont from "next/font/local";
-
-import { ReactLenis } from 'lenis/react';
 
 import "./globals.css";
 
@@ -16,7 +15,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
