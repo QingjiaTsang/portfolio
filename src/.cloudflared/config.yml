@@ -1,0 +1,7 @@
+tunnel: 297c7c32-be6e-43e4-bb19-c179ca1294fe
+credentials-file: /Users/tsang/.cloudflared/297c7c32-be6e-43e4-bb19-c179ca1294fe.json
+
+ingress:
+  - hostname: portfolio.slack.rest
+    service: http://localhost:3000
+  - service: http_status:404

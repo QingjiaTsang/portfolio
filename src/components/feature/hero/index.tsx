@@ -1,4 +1,4 @@
-import { ComputersCanvas } from "@/components/canvas";
+import { ComputersCanvas } from "@/components/canvas/computers";
 import { ScrollIndicator } from "@/components/feature/hero/scroll-indicator";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";

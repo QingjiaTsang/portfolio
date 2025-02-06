@@ -16,16 +16,23 @@ export function AboutComponent() {
         <h2 className="text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]">Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("left", "spring", 0.1, 1)}
-        className="mt-4 max-w-3xl text-[17px] leading-[30px] text-custom-secondary"
-      >
-        I'm a Full Stack Developer with extensive experience in web development.
-        I specialize in building high-performance, scalable applications and stay passionate about emerging technologies.
-        With expertise in frontend development and a strong background in building full-stack applications using Next.js and Hono.js,
-        I also have solid experience in cloud deployment. I maintain a constant drive for learning new technologies
-        and am dedicated to delivering optimal technical solutions.
-      </motion.p>
+      {/* Note: in fadeIn function, we set the "left" value, it means at the first place, this long text is on the right side of the screen, */}
+      {/* which will make a horizontal scrollbar appear, so don't forget to wrap the text in a div with overflow-hidden */}
+      <div className="overflow-hidden">
+        <motion.p
+          variants={fadeIn("left", "spring", 0.1, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-4 max-w-3xl text-[17px] leading-[30px] text-custom-secondary"
+        >
+          I'm a Full Stack Developer with extensive experience in web development.
+          I specialize in building high-performance, scalable applications and stay passionate about emerging technologies.
+          With expertise in frontend development and a strong background in building full-stack applications using Next.js and Hono.js,
+          I also have solid experience in cloud deployment. I maintain a constant drive for learning new technologies
+          and am dedicated to delivering optimal technical solutions.
+        </motion.p>
+      </div>
 
       <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (

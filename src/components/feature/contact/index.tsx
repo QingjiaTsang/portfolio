@@ -7,14 +7,13 @@ import { ContactForm } from "@/components/feature/contact/contact-form";
 
 export function ContactComponent() {
   return (
-    <section >
+    <section>
       <div className="relative flex min-h-screen flex-col items-center justify-center">
         <Image
           src="/assets/terminal.png"
           alt="terminal-bg"
           fill
           className="absolute inset-0 min-h-screen"
-          priority
         />
 
         <div className="contact-container">

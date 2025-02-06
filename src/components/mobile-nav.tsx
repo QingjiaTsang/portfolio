@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 import {
   DropdownMenu,
@@ -11,7 +12,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 import type { NavItem } from "./floating-navbar";
 
@@ -40,11 +40,13 @@ export function MobileNav({ navItems }: MobileNavProps) {
             exit={{ opacity: 0, rotate: 90 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            {isOpen ? (
-              <X className="size-5 text-slate-300" />
-            ) : (
-              <Menu className="size-5 text-slate-300" />
-            )}
+            {isOpen
+              ? (
+                  <X className="size-5 text-slate-300" />
+                )
+              : (
+                  <Menu className="size-5 text-slate-300" />
+                )}
           </motion.div>
         </AnimatePresence>
       </DropdownMenuTrigger>

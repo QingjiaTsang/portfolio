@@ -33,6 +33,7 @@
     "react-globe.gl": "^2.31.3",
     "react-hook-form": "^7.54.2",
     "react-parallax-tilt": "^1.7.276",
+    "sharp": "^0.33.5",
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",

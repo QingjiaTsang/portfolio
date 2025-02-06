@@ -1,5 +1,4 @@
-import { About, Contact, Experience, StarsCanvas, Tech, Works } from "@/components";
-import { Hero } from "@/components/feature/hero";
+import { About, Contact, Experience, Hero, StarsCanvas, Tech, Works } from "@/components";
 import { FloatingNav } from "@/components/floating-navbar";
 
 export default function Home() {

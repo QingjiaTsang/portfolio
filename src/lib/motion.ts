@@ -78,7 +78,7 @@ export function slideIn(direction: DirectionType, type: TransitionType, delay: n
   };
 }
 
-export function staggerContainer(staggerChildren: number, delayChildren: number) {
+export function staggerContainer(staggerChildren?: number, delayChildren?: number) {
   return {
     hidden: {},
     show: {
