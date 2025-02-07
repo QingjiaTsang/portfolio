@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import ProfileGrids from "@/components/feature/about/profile-grids";
 import { TagCard } from "@/components/feature/about/tag-card";
-import { services } from "@/constants";
+import { tags } from "@/constants";
 import { fadeIn, textVariant } from "@/lib/motion";
 
 export function AboutComponent() {
@@ -13,7 +13,7 @@ export function AboutComponent() {
     <div>
       <motion.div variants={textVariant(0.5)}>
         <p className="text-[14px] uppercase tracking-wider text-custom-secondary sm:text-[18px]">Introduction</p>
-        <h2 className="text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]">Overview.</h2>
+        <h2 className="text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]">Overview</h2>
       </motion.div>
 
       {/* Note: in fadeIn function, we set the "left" value, it means at the first place, this long text is on the right side of the screen, */}
@@ -35,7 +35,7 @@ export function AboutComponent() {
       </div>
 
       <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((service, index) => (
+        {tags.map((service, index) => (
           <TagCard key={service.title} index={index} {...service} />
         ))}
       </div>

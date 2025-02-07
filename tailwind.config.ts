@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+import tailwindScrollbar from "tailwind-scrollbar";
 import animatePlugin from "tailwindcss-animate";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
@@ -114,12 +115,12 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        generalsans: ['General Sans', 'sans-serif'],
+        generalsans: ["General Sans", "sans-serif"],
       },
     },
   },
 
-  plugins: [animatePlugin, addVariablesForColors],
+  plugins: [animatePlugin, addVariablesForColors, tailwindScrollbar],
 };
 export default config;
 

@@ -8,6 +8,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 
 import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,13 +31,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // TODO: make the scrollbar invisible
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          `${geistSans.variable} ${geistMono.variable} antialiased`,
+          "scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300",
+        )}
       >
-        <ReactLenis root options={{ lerp: 0.1, smoothWheel: true }}>
+        <ReactLenis root>
           {children}
           <Toaster />
         </ReactLenis>

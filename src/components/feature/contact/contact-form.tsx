@@ -22,6 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { env } from "@/lib/env";
 
+// TODO: make mobile responsive
 export function ContactForm() {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),

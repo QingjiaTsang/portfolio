@@ -1,82 +1,58 @@
 import backend from "./backend.png";
-import carrent from "./carrent.png";
-import close from "./close.svg";
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import github from "./github.png";
-import jobit from "./jobit.png";
-import logo from "./logo.svg";
-import menu from "./menu.svg";
 import quickLearner from "./quick_learner.png";
 import techEnthusiast from "./tech_enthusiast.png";
-import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
+import drizzle from "./tech/drizzle.jpg";
+import electron from "./tech/electron.png";
+import framer_motion from "./tech/framer_motion.png";
+import honojs from "./tech/honojs.png";
+import jotai from "./tech/jotai.png";
+import nextjs from "./tech/nextjs.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
+import supabase from "./tech/supabase.png";
 import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
+import tanstack_query from "./tech/tanstack_query.png";
 import typescript from "./tech/typescript.png";
-import tripguide from "./tripguide.png";
 import web from "./web.png";
 
 // 基础图标和 Logo
 const baseImages = {
-  logo,
   backend,
   quickLearner,
   techEnthusiast,
   web,
   github,
-  menu,
-  close,
 
 } as const;
 
 // 技术栈图标
 const techImages = {
-  css,
   docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
+  framer_motion,
+  electron,
+  tanstack_query,
   nodejs,
   reactjs,
-  redux,
+  jotai,
   tailwind,
   typescript,
-  threejs,
-} as const;
-
-// 公司图标
-const companyImages = {
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  drizzle,
+  honojs,
+  nextjs,
+  supabase,
 } as const;
 
 // 项目图片
 const projectImages = {
-  carrent,
-  jobit,
-  tripguide,
+
 } as const;
 
 // 导出所有图片资源
 export const images = {
   ...baseImages,
   ...techImages,
-  ...companyImages,
   ...projectImages,
 } as const;
 
@@ -84,37 +60,27 @@ export const images = {
 export {
   backend,
   // Project images
-  carrent,
-  close,
   // Tech stack images
-  css,
   docker,
-  figma,
-  git,
+  drizzle,
+  electron,
+  framer_motion,
   github,
+  honojs,
 
-  html,
-  javascript,
-  jobit,
+  jotai,
   // Base images
-  logo,
-  menu,
   // Company images
-  meta,
-  mongodb,
+  nextjs,
   nodejs,
   quickLearner,
   reactjs,
-  redux,
-  shopify,
-  starbucks,
+  supabase,
 
   tailwind,
+  tanstack_query,
   techEnthusiast,
-  tesla,
-  threejs,
 
-  tripguide,
   typescript,
   web,
 };
