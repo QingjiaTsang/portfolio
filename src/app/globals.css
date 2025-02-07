@@ -255,10 +255,6 @@
 }
 
 @layer utilities {
-  .c-space {
-    @apply px-5 sm:px-10;
-  }
-
   .head-text {
     @apply text-gray_gradient text-3xl font-semibold sm:text-4xl;
   }
