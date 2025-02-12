@@ -233,21 +233,21 @@ function CardFooter({ iconLists, link }: { iconLists: string[]; link: string }) 
         {iconLists.map((icon, index) => (
           <div
             key={index}
-            className="relative flex size-8 items-center justify-center rounded-full border border-white/[.2] bg-black lg:size-10"
+            className="relative flex size-6 items-center justify-center rounded-full border border-white/[.2] bg-black sm:size-8 lg:size-10"
             style={{
               transform: `translateX(-${5 * index + 2}px)`,
             }}
           >
-            <Image src={`/assets/projects${icon}`} alt="icon5" fill className="p-2" />
+            <Image src={`/assets/projects${icon}`} alt="icon5" fill className="p-1 sm:p-2" />
           </div>
         ))}
       </div>
 
       <Link href={link} target="_blank" className="flex items-center justify-center">
         <p className="flex text-sm text-[#CBACF9] md:text-xs lg:text-xl">
-          Check Live Site
+          Live Site
         </p>
-        <ArrowUpRight className="ml-3 text-[#CBACF9]" />
+        <ArrowUpRight className="ml-0.5 text-[#CBACF9]" />
       </Link>
     </div>
   );
