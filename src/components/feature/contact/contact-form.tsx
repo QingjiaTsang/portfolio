@@ -21,8 +21,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { env } from "@/lib/env";
+import { cn } from "@/lib/utils";
 
-// TODO: make mobile responsive
 export function ContactForm() {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -53,21 +53,24 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="mt-12 flex flex-col space-y-7">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="mt-4 flex flex-col space-y-3 px-3 xs:mt-6 xs:space-y-4 xs:px-4 sm:mt-8 sm:space-y-5 sm:px-0"
+      >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="field-label">Name</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Name</FormLabel>
               <FormControl>
                 <Input
                   placeholder="e.g., John Doe"
-                  className="field-input"
+                  className="sm:field-input h-8 text-xs placeholder:text-xs focus:ring-purple-500/40 xs:h-9 xs:text-sm xs:placeholder:text-sm"
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-[10px] xs:text-xs sm:text-base" />
             </FormItem>
           )}
         />
@@ -77,16 +80,16 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="field-label">Email Address</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Email Address</FormLabel>
               <FormControl>
                 <Input
                   {...field}
                   type="email"
                   placeholder="e.g., john.doe@gmail.com"
-                  className="field-input"
+                  className="sm:field-input h-8 text-xs placeholder:text-xs focus:ring-purple-500/40 xs:h-9 xs:text-sm xs:placeholder:text-sm"
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-[10px] xs:text-xs sm:text-base" />
             </FormItem>
           )}
         />
@@ -96,25 +99,32 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="field-label">Message</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Message</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   placeholder="Share your thoughts or questions..."
-                  rows={5}
-                  className="field-input min-h-[120px]"
+                  rows={4}
+                  className={cn(
+                    "sm:field-input resize-none focus:ring-purple-500/40",
+                    "min-h-[80px] text-xs placeholder:text-xs",
+                    "xs:min-h-[90px] xs:text-sm xs:placeholder:text-sm",
+                  )}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-[10px] xs:text-xs sm:text-base" />
             </FormItem>
           )}
         />
 
         <Button
           type="submit"
-          variant="outline"
-          size="lg"
-          className="field-btn"
+          className={cn(
+            "contact-submit-btn",
+            "!mt-5 flex h-10 items-center justify-center gap-1.5 rounded-lg px-4 text-xs font-medium",
+            "xs:h-12 xs:gap-2 xs:px-5 xs:text-sm",
+            "transition-all duration-300",
+          )}
           disabled={form.formState.isSubmitting}
         >
           {form.formState.isSubmitting ? "Sending..." : "Send Message"}

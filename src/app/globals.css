@@ -363,7 +363,28 @@
 
   /* contact section */
   .contact-container {
-    @apply relative z-10 mt-12 max-w-xl px-5 sm:px-10;
+    @apply relative z-10 mt-12 max-w-xl px-10;
+  }
+
+  .contact-submit-btn {
+    @apply border-custom-black-500 bg-custom-black-500 text-white hover:bg-custom-black-500/90 hover:text-white;
+    @apply hover:shadow-[0_0_15px_rgba(58,58,73,0.9)];
+  }
+
+  .contact-submit-btn:hover .field-btn_arrow {
+    @apply translate-x-0.5 transform opacity-90 transition-all duration-300;
+    animation: bounce 1s infinite;
+    filter: brightness(1) invert(1);
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(3px);
+    }
   }
 
   .field-label {

@@ -1,7 +1,14 @@
-import { About, Contact, Experience, Hero, StarsCanvas, Tech, Works } from "@/components";
+import { About, Contact, Experience, Hero, Tech, Works } from "@/components";
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
+// TODO: add i18n to support Chinese
+// TODO: add download CV button
+// TODO: add social links (github, linkedin, twitter)
+// TODO: modify metadata of favicon, title, desc, etc.
+// TODO: add sentry to monitor traffic
+// TODO: do lighthouse SEO testing
+// TODO: add og image for social platform (low priority)
 export default function Home() {
   return (
     <div className="relative min-h-dvh bg-custom-primary">
@@ -13,10 +20,7 @@ export default function Home() {
       <Tech />
       <Experience />
       <Works />
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
+      <Contact />
     </div>
   );
 }

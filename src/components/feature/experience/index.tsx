@@ -19,7 +19,7 @@ export function ExperienceComponent() {
         Experience
       </h1>
 
-      <div className="mt-12 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
+      <div className="mt-4 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
         {workExperience.map(card => (
           <FancyCard
             key={card.id}

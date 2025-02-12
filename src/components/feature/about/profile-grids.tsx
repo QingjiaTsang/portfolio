@@ -70,7 +70,7 @@ function ProfileGrids() {
             <div>
               <p className="grid-headtext">Professional Experience</p>
               <p className="grid-subtext">
-                With 2 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
+                With 2.5 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
                 and responsive websites.
               </p>
             </div>
@@ -107,7 +107,14 @@ function ProfileGrids() {
             <div className="flex flex-1 flex-col">
               <div>
                 <p className="grid-headtext">I'm very flexible with time zone communications & locations</p>
-                <p className="grid-subtext">I&apos;m based in Guangzhou, China and open to remote work worldwide.</p>
+                <div className="grid-subtext">
+                  I&apos;m based in Guangzhou, China and open to remote work worldwide.
+                  <ul className="list-disc pl-5">
+                    <li>🇬🇧 Professional English (PTE 63) - Code documentation & async communication</li>
+                    <li>🇨🇳 Native Mandarin - Technical localization expertise</li>
+                    <li>🇭🇰 Native Cantonese - Regional market adaptation</li>
+                  </ul>
+                </div>
               </div>
               <div className="flex flex-1 items-center max-md:pt-6 md:pt-6">
                 <ContactButton onClick={handleContactClick} />

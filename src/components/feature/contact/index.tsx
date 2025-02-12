@@ -17,11 +17,13 @@ export function ContactComponent() {
         />
 
         <div className="contact-container">
-          <h3 className="head-text">Let's talk</h3>
-          <p className="mt-3 text-lg text-custom-white-600">
-            Whether you're looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I'm here to help.
-          </p>
+          <div className="max-sm:pl-3">
+            <h3 className="head-text">Let's talk</h3>
+            <p className="mt-3 text-sm font-medium text-custom-white-600 text-white/80 sm:text-lg">
+              Whether you're looking to build a new website, improve your existing platform, or bring a unique project to
+              life, I'm here to help.
+            </p>
+          </div>
 
           <ContactForm />
         </div>

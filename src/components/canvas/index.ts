@@ -1,5 +1,3 @@
-export { BallCanvas } from "./ball";
-export { ComputersCanvas } from "./computers";
-export { EarthCanvas } from "./earth";
-export { CanvasLoader } from "./loader";
-export { StarsCanvas } from "./stars";
+export { BallCanvas } from "@/components/canvas/ball";
+export { ComputersCanvas } from "@/components/canvas/computers";
+export { CanvasLoader } from "@/components/canvas/loader";

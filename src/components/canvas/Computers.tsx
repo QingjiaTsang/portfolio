@@ -40,11 +40,6 @@ function Computers({ isMobile }: { isMobile: boolean }) {
         scale={isMobile ? 0.7 : 0.8}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.005, -0.2, -0.1]}
-
-        // for sci-fi_computer
-        // scale={isMobile ? 1.4 : 1.5}
-        // position={isMobile ? [-10, -3, -2] : [0.1, -3.25, 1.1]}
-        // rotation={[-0.008, Math.PI / 2.4, 0.01]}
       />
     </mesh>
   );

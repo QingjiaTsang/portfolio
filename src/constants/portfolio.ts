@@ -104,8 +104,8 @@ export const technologies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Contributed to the development of a web-based platform using React.js, enhancing user interactivity and optimizing performance. Worked closely with senior engineers to implement responsive layouts and improve the overall user experience.",
+    title: "Self-taught Web Developer Journey",
+    desc: "My journey into frontend development began with a passion for learning and coding. As an autodidact, I regularly watched technical YouTube channels like Syntax, Wes Bos, Jack Herrington, Hamed Bahram, Dave Gray, and many others to deepen my knowledge (I'm grateful for their valuable content and guidance). Through practical application, I developed strong skills in React.js and JavaScript, while staying up-to-date with the latest tech trends by reading articles on Medium and DEV Community. This relentless pursuit of learning and embracing new technologies has shaped me into a capable and adaptable developer.",
     className: "md:col-span-2",
     thumbnail: "/assets/exp1.svg",
   },
@@ -129,5 +129,44 @@ export const workExperience = [
     desc: "Led a team of frontend developers in designing and maintaining user-facing features for a range of projects using modern frontend technologies like Next.js, Zustand, and TailwindCSS. Successfully collaborated with backend teams to integrate APIs and optimize application performance.",
     className: "md:col-span-2",
     thumbnail: "/assets/exp4.svg",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Slack Clone - Real-Time Chat App with Video Call",
+    des: "A real-time team communication app with peer-to-peer video call functionality, built with Next.js, TailwindCSS, Tanstack Query, Framer Motion, and Convex.",
+    img: "/p1.svg",
+    hoverImg: "/p1-hover.svg",
+    iconLists: ["/ts.svg", "/nextjs.svg", "/tanstack_query.png", "/tailwindcss.svg", "/shadcn.png", "/framer-motion.svg", "/convex.svg", "/clerk.svg", "/stream.svg"],
+    link: "https://slack.rest",
+  },
+  {
+    id: 2,
+    title: "EstateHub - Real Estate App",
+    des: "A real estate app that allows users to search for, add/edit/delete properties, view property details, and complete transactions.",
+    img: "/p2.svg",
+    hoverImg: "/p2-hover.svg",
+    iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/framer-motion.svg", "/kinde.svg", "/prisma.svg", "/supabase.svg", "/stripe.svg"],
+    link: "https://property-umber.vercel.app",
+  },
+  {
+    id: 3,
+    title: "NoteBot - Note Taking App with AI",
+    des: "A note-taking app enhanced with AI and Pinecone for vector embeddings, enabling users to interact with their notes intelligently.",
+    img: "/p3.svg",
+    hoverImg: "/p3-hover.svg",
+    iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/prisma.svg", "/mongodb.svg", "/clerk.svg", "/openai.svg"],
+    link: "https://nextjs-note-taking-chatbot.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "AICV - Resume Builder with AI (monorepo)",
+    des: "A resume builder with AI that allows users to create and optimize a beautiful resume with AI based on the job description and user background.",
+    img: "/p4.svg",
+    // hoverImg: "/p4-hover.svg",
+    iconLists: ["/ts.svg", "/react.svg", "/tanstack.png", "/tailwindcss.svg", "/honojs.png", "/drizzle.svg", "/authjs.webp", "/cloudflare.svg"],
+    link: "coming soon, stay tuned...",
   },
 ];

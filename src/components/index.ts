@@ -1,4 +1,4 @@
-export { BallCanvas, ComputersCanvas, EarthCanvas, StarsCanvas } from "./canvas";
+export { BallCanvas, ComputersCanvas } from "./canvas";
 export { About } from "./feature/about";
 export { Contact } from "./feature/contact";
 export { Experience } from "./feature/experience";

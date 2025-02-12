@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 
 import "lenis/dist/lenis.css";
 import ReactLenis from "lenis/react";
-
-import "./globals.css";
-
 import localFont from "next/font/local";
 
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
