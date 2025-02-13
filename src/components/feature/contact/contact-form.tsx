@@ -22,8 +22,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { env } from "@/lib/env";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export function ContactForm() {
+  const t = useTranslations('contact.form');
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
@@ -43,11 +45,11 @@ export function ContactForm() {
         env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       );
 
-      toast.success("Thank you for your message 😃");
+      toast.success(t('success'));
     }
     catch (error) {
       console.error(error);
-      toast.error("I didn't receive your message 😢");
+      toast.error(t('error'));
     }
   };
 
@@ -62,10 +64,12 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Name</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">
+                {t('name.label')}
+              </FormLabel>
               <FormControl>
                 <Input
-                  placeholder="e.g., John Doe"
+                  placeholder={t('name.placeholder')}
                   className="sm:field-input h-8 text-xs placeholder:text-xs focus:ring-purple-500/40 xs:h-9 xs:text-sm xs:placeholder:text-sm"
                   {...field}
                 />
@@ -80,12 +84,14 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Email Address</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">
+                {t('email.label')}
+              </FormLabel>
               <FormControl>
                 <Input
                   {...field}
                   type="email"
-                  placeholder="e.g., john.doe@gmail.com"
+                  placeholder={t('email.placeholder')}
                   className="sm:field-input h-8 text-xs placeholder:text-xs focus:ring-purple-500/40 xs:h-9 xs:text-sm xs:placeholder:text-sm"
                 />
               </FormControl>
@@ -99,11 +105,13 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">Message</FormLabel>
+              <FormLabel className="sm:field-label text-xs font-medium text-white/80 xs:text-sm">
+                {t('message.label')}
+              </FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="Share your thoughts or questions..."
+                  placeholder={t('message.placeholder')}
                   rows={4}
                   className={cn(
                     "sm:field-input resize-none focus:ring-purple-500/40",
@@ -127,7 +135,7 @@ export function ContactForm() {
           )}
           disabled={form.formState.isSubmitting}
         >
-          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+          {form.formState.isSubmitting ? t('submit.sending') : t('submit.default')}
           <Image
             src="/assets/arrow-up.png"
             alt="arrow-up"

@@ -9,6 +9,7 @@ import {
 import { useLenis } from "lenis/react";
 import { useState } from "react";
 
+import { LanguageSwitcher } from '@/components/language-switcher';
 import { MobileNav } from "@/components/mobile-nav";
 import { ScrollProgressBar } from "@/components/scroll-progress-bar";
 import { cn } from "@/lib/utils";
@@ -86,7 +87,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
       >
 
         {/* Desktop */}
-        <div className="hidden justify-center gap-2 sm:flex">
+        <div className="hidden items-center justify-center gap-2 sm:flex">
           {navItems.map(navItem => (
             <button
               type="button"
@@ -106,10 +107,13 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
               <span>{navItem.name}</span>
             </button>
           ))}
+          <div className="mx-2 h-5 w-[1px] bg-white/[0.08]" /> {/* 分隔线 */}
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile */}
-        <div className="sm:hidden">
+        <div className="flex items-center gap-2 sm:hidden ml-2">
+          <LanguageSwitcher />
           <MobileNav navItems={navItems} />
         </div>
       </motion.div>

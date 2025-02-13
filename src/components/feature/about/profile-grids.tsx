@@ -8,6 +8,7 @@ import { useState } from "react";
 
 import { ContactButton } from "@/components/feature/about/contact-button";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const Globe = dynamic(() => import("react-globe.gl").then(mod => mod.default), {
   ssr: false,
@@ -43,6 +44,7 @@ function ProfileImage({ src, alt, className }: { src: string; alt: string; class
 }
 
 function ProfileGrids() {
+  const t = useTranslations('about');
   const lenis = useLenis();
 
   const [hasCopied, setHasCopied] = useState(false);
@@ -66,13 +68,9 @@ function ProfileGrids() {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <ProfileImage src="/assets/grid1.png" alt="grid-1" />
-
             <div>
-              <p className="grid-headtext">Professional Experience</p>
-              <p className="grid-subtext">
-                With 2.5 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
-                and responsive websites.
-              </p>
+              <p className="grid-headtext">{t('professional.title')}</p>
+              <p className="grid-subtext">{t('professional.description')}</p>
             </div>
           </div>
         </div>
@@ -81,15 +79,13 @@ function ProfileGrids() {
           <div className="grid-container">
             <ProfileImage src="/assets/grid2.png" alt="grid-2" />
             <div>
-              <p className="grid-headtext">Continuous Learning</p>
-              <p className="grid-subtext">
-                I'm passionate about staying up-to-date with emerging technologies and best practices, constantly expanding my
-                knowledge through hands-on projects and research.
-              </p>
+              <p className="grid-headtext">{t('learning.title')}</p>
+              <p className="grid-subtext">{t('learning.description')}</p>
             </div>
           </div>
         </div>
 
+        {/* Location grid */}
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container flex">
             <div className="flex h-fit w-full cursor-pointer items-center justify-center rounded-3xl sm:h-[326px]">
@@ -106,46 +102,41 @@ function ProfileGrids() {
             </div>
             <div className="flex flex-1 flex-col">
               <div>
-                <p className="grid-headtext">I'm very flexible with time zone communications & locations</p>
+                <p className="grid-headtext">{t('location.title')}</p>
                 <div className="grid-subtext">
-                  I&apos;m based in Guangzhou, China and open to remote work worldwide.
+                  {t('location.description')}
                   <ul className="list-disc pl-5">
-                    <li>🇬🇧 Professional English (PTE 63) - Code documentation & async communication</li>
-                    <li>🇨🇳 Native Mandarin - Technical localization expertise</li>
-                    <li>🇭🇰 Native Cantonese - Regional market adaptation</li>
+                    <li>{t('location.languages.english')}</li>
+                    <li>{t('location.languages.mandarin')}</li>
+                    <li>{t('location.languages.cantonese')}</li>
                   </ul>
                 </div>
               </div>
               <div className="flex flex-1 items-center max-md:pt-6 md:pt-6">
-                <ContactButton onClick={handleContactClick} />
+                <ContactButton text={t("contact.title")} onClick={handleContactClick} />
               </div>
             </div>
           </div>
         </div>
 
+        {/* Passion grid */}
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
             <ProfileImage src="/assets/grid3.png" alt="grid-3" className="sm:h-[266px]" />
-
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession — it&apos;s my passion.  I'm passionate about writing clean, maintainable code that follows best practices and design principles. Code quality and readability are always my top priorities.
-              </p>
+              <p className="grid-headtext">{t('passion.title')}</p>
+              <p className="grid-subtext">{t('passion.description')}</p>
             </div>
           </div>
         </div>
 
+        {/* Contact grid */}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container relative">
-            <ProfileImage
-              src="/assets/grid4.png"
-              alt="grid-4"
-            />
+            <ProfileImage src="/assets/grid4.png" alt="grid-4" />
             <div className="absolute inset-x-0 bottom-16 flex w-full justify-center">
               <div>
-                <p className="grid-subtext text-center">Contact me</p>
+                <p className="grid-subtext text-center mb-4">{t('contact.title')}</p>
                 <div className="copy-container" onClick={handleCopy}>
                   <Image
                     src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}

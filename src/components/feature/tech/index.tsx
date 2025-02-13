@@ -4,8 +4,11 @@ import { SectionWrapper } from "@/components/common/section-wrapper";
 import { TechBall } from "@/components/feature/tech/tech-ball";
 import { technologies } from "@/constants";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export function TechComponent() {
+  const t = useTranslations('tech');
+
   return (
     <>
       <h1
@@ -14,7 +17,7 @@ export function TechComponent() {
           "text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]",
         )}
       >
-        Tech Stacks
+        {t("title")}
       </h1>
 
       <div className="mt-4 flex flex-row flex-wrap justify-center gap-10">

@@ -2,7 +2,6 @@ import { About, Contact, Experience, Hero, Tech, Works } from "@/components";
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
-// TODO: add i18n to support Chinese
 // TODO: add download CV button
 // TODO: add social links (github, linkedin, twitter)
 // TODO: modify metadata of favicon, title, desc, etc.

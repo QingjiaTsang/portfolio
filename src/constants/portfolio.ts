@@ -28,22 +28,23 @@ export const navItems = [
 
 export const tags = [
   {
-    title: "Frontend Developer",
+    id: "frontend",
     icon: web,
   },
   {
-    title: "Quick Learner",
+    id: "quickLearner",
     icon: quickLearner,
   },
   {
-    title: "Backend Developer",
+    id: "backend",
     icon: backend,
   },
   {
-    title: "Tech Enthusiast",
+    id: "techEnthusiast",
     icon: techEnthusiast,
   },
-];
+] as const
+export type Tag = (typeof tags)[number]
 
 export const technologies = [
   {
@@ -111,74 +112,59 @@ export const technologies = [
     icon: supabase,
     shadow: "#3ecf8eb7",
   },
-];
+] as const;
 
 export const workExperience = [
   {
-    id: 1,
-    title: "Self-taught Web Developer Journey",
-    desc: "My journey into frontend development began with a passion for learning and coding. As an autodidact, I regularly watched technical YouTube channels like Syntax, Wes Bos, Jack Herrington, Hamed Bahram, Dave Gray, and many others to deepen my knowledge (I'm grateful for their valuable content and guidance). Through practical application, I developed strong skills in React.js and JavaScript, while staying up-to-date with the latest tech trends by reading articles on Medium and DEV Community. This relentless pursuit of learning and embracing new technologies has shaped me into a capable and adaptable developer.",
-    className: "md:col-span-2",
+    id: "selfTaught",
     thumbnail: "/assets/exp1.svg",
+    className: "md:col-span-2",
   },
   {
-    id: 2,
-    title: "Desktop App Developer",
-    desc: "Built a cross-platform desktop application with React.js & Electron. Focused on performance optimization for native-like experiences, real-time features via WebSocket, and type-safe API integrations with TypeScript, Zod.",
-    className: "md:col-span-2",
+    id: "desktop",
     thumbnail: "/assets/exp2.svg",
+    className: "md:col-span-2",
   },
   {
-    id: 3,
-    title: "Freelance App Development Project",
-    desc: "Led the full development lifecycle of a custom application for a client. Focused on building scalable and maintainable code while ensuring optimal performance and user engagement.",
-    className: "md:col-span-2",
+    id: "freelance",
     thumbnail: "/assets/exp3.svg",
+    className: "md:col-span-2",
   },
   {
-    id: 4,
-    title: "Lead Frontend Developer - Fanteng Technologies",
-    desc: "Led a team of frontend developers in designing and maintaining user-facing features for a range of projects using modern frontend technologies like Next.js, Zustand, and TailwindCSS. Successfully collaborated with backend teams to integrate APIs and optimize application performance.",
-    className: "md:col-span-2",
+    id: "lead",
     thumbnail: "/assets/exp4.svg",
+    className: "md:col-span-2",
   },
-];
+] as const;
 
 export const projects = [
   {
-    id: 1,
-    title: "Slack Clone - Real-Time Chat App with Video Call",
-    des: "A real-time team communication app with peer-to-peer video call functionality, built with Next.js, TailwindCSS, Tanstack Query, Framer Motion, and Convex.",
+    id: "slack",
     img: "/p1.svg",
     hoverImg: "/p1-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tanstack_query.png", "/tailwindcss.svg", "/shadcn.png", "/framer-motion.svg", "/convex.svg", "/clerk.svg", "/stream.svg"],
     link: "https://slack.rest",
   },
   {
-    id: 2,
-    title: "EstateHub - Real Estate App",
-    des: "A real estate app that allows users to search for, add/edit/delete properties, view property details, and complete transactions.",
-    img: "/p2.svg",
+    id: "estate",
+    img: "/p2.svg", 
     hoverImg: "/p2-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/framer-motion.svg", "/kinde.svg", "/prisma.svg", "/supabase.svg", "/stripe.svg"],
     link: "https://property-umber.vercel.app",
   },
   {
-    id: 3,
-    title: "NoteBot - Note Taking App with AI",
-    des: "A note-taking app enhanced with AI and Pinecone for vector embeddings, enabling users to interact with their notes intelligently.",
+    id: "note",
     img: "/p3.svg",
     hoverImg: "/p3-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/prisma.svg", "/mongodb.svg", "/clerk.svg", "/openai.svg"],
     link: "https://nextjs-note-taking-chatbot.vercel.app/",
   },
   {
-    id: 4,
-    title: "AICV - Resume Builder with AI (monorepo)",
-    des: "A resume builder with AI that allows users to create and optimize a beautiful resume with AI based on the job description and user background.",
+    id: "cv",
     img: "/p4.svg",
-    // hoverImg: "/p4-hover.svg",
+    hoverImg: "/p4.svg",
     iconLists: ["/ts.svg", "/react.svg", "/tanstack.png", "/tailwindcss.svg", "/honojs.png", "/drizzle.svg", "/authjs.webp", "/cloudflare.svg"],
     link: "coming soon, stay tuned...",
   },
-];
+] as const;
+export type Project = (typeof projects)[number]

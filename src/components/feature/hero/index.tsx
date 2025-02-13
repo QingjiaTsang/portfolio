@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { ComputersCanvas } from "@/components/canvas/computers";
 import { ScrollIndicator } from "@/components/feature/hero/scroll-indicator";
@@ -10,6 +11,8 @@ import { increaseHeight, zoomIn } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <section className="relative mx-auto h-dvh w-full">
       <div
@@ -27,8 +30,8 @@ export function Hero() {
           <h1 className="text-[26px] leading-normal text-white sm:text-4xl md:text-5xl lg:text-6xl">
             <TextGenerateEffect
               segments={[
-                { text: "Hi, I'm", className: "font-black" },
-                { text: "Qingjia Tsang", className: "text-[#915eff] font-black" },
+                { text: t('greeting'), className: "font-black" },
+                { text: t("name"), className: "text-[#915eff] font-black" },
               ]}
               duration={0.6}
             />
@@ -38,7 +41,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: "Fullstack Developer",
+                  text: t('role'),
                   className: "text-white",
                 },
               ]}
@@ -47,7 +50,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: "Building modern web applications",
+                  text: t('description'),
                   className: "text-white",
                 },
               ]}

@@ -1,11 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { ProjectCard } from "@/components/feature/works/pin";
 import { projects } from "@/constants";
 import { cn } from "@/lib/utils";
 
 export function WorksComponent() {
+  const t = useTranslations('works');
+
   return (
     <>
       <h1
@@ -15,12 +19,17 @@ export function WorksComponent() {
           "max-sm:-mb-8",
         )}
       >
-        Recent Projects
+        {t('title')}
       </h1>
 
       <div className="mt-4 flex flex-wrap items-center justify-center gap-x-16 gap-y-10">
         {projects.map(item => (
-          <ProjectCard key={item.id} {...item} />
+          <ProjectCard
+            {...item}
+            key={item.id}
+            title={t(`projects.${item.id}.title`)}
+            des={t(`projects.${item.id}.des`)}
+          />
         ))}
       </div>
     </>

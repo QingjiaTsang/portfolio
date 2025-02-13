@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { FancyCard } from "@/components/feature/experience/moving-borders";
@@ -8,6 +9,8 @@ import { workExperience } from "@/constants";
 import { cn } from "@/lib/utils";
 
 export function ExperienceComponent() {
+  const t = useTranslations('experience');
+
   return (
     <>
       <h1
@@ -16,7 +19,7 @@ export function ExperienceComponent() {
           "text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]",
         )}
       >
-        Experience
+        {t('title')}
       </h1>
 
       <div className="mt-4 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
@@ -36,7 +39,7 @@ export function ExperienceComponent() {
             <div className="flex flex-col gap-2 p-3 py-6 md:p-5 lg:flex-row lg:items-center lg:p-10">
               <Image
                 src={card.thumbnail}
-                alt={card.thumbnail}
+                alt={t(`items.${card.id}.title`)}
                 width={128}
                 height={128}
                 className="w-16 md:w-20 lg:w-32"
@@ -44,10 +47,10 @@ export function ExperienceComponent() {
               />
               <div className="lg:ms-5">
                 <h1 className="text-start font-generalsans text-xl font-bold md:text-2xl">
-                  {card.title}
+                  {t(`items.${card.id}.title`)}
                 </h1>
                 <p className="mt-3 text-start font-generalsans text-custom-white-100">
-                  {card.desc}
+                  {t(`items.${card.id}.desc`)}
                 </p>
               </div>
             </div>

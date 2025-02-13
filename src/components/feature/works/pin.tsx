@@ -6,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+import type { Project } from "@/constants";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export function PinContainer({
   children,
@@ -173,12 +175,8 @@ export function PinPerspective({
 
 type ProjectCardProps = {
   title: string;
-  link: string;
-  img: string;
-  hoverImg?: string; // Make hoverImg optional
   des: string;
-  iconLists: string[];
-};
+} & Project;
 
 export function ProjectCard({ title, link, img, hoverImg, des, iconLists }: ProjectCardProps) {
   const [isHovering, setIsHovering] = useState(false);
@@ -219,14 +217,15 @@ function CardContent({ title, des }: { title: string; des: string }) {
       <h1 className="line-clamp-1 text-base font-bold text-white md:text-xl lg:text-2xl">
         {title}
       </h1>
-      <p className="my-1 line-clamp-3 text-sm font-light text-[#BEC1DD] lg:text-xl lg:font-normal">
+      <p className="my-1 min-h-[4em] line-clamp-3 text-sm font-light text-[#BEC1DD] lg:text-xl lg:font-normal">
         {des}
       </p>
     </>
   );
 }
 
-function CardFooter({ iconLists, link }: { iconLists: string[]; link: string }) {
+function CardFooter({ iconLists, link }: { iconLists: readonly string[]; link: string }) {
+  const t = useTranslations('works');
   return (
     <div className="mb-3 mt-7 flex items-center justify-between">
       <div className="flex items-center">
@@ -245,7 +244,7 @@ function CardFooter({ iconLists, link }: { iconLists: string[]; link: string }) 
 
       <Link href={link} target="_blank" className="flex items-center justify-center">
         <p className="flex text-sm text-[#CBACF9] md:text-xs lg:text-xl">
-          Live Site
+          {t("liveSite")}
         </p>
         <ArrowUpRight className="ml-0.5 text-[#CBACF9]" />
       </Link>
