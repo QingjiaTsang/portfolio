@@ -1,14 +1,13 @@
 "use client";
 
+import { DownloadCvButton } from "@/components/feature/about/download-cv-button";
 import copy from "copy-to-clipboard";
-import { useLenis } from "lenis/react";
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 
-import { ContactButton } from "@/components/feature/about/contact-button";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 
 const Globe = dynamic(() => import("react-globe.gl").then(mod => mod.default), {
   ssr: false,
@@ -44,8 +43,7 @@ function ProfileImage({ src, alt, className }: { src: string; alt: string; class
 }
 
 function ProfileGrids() {
-  const t = useTranslations('about');
-  const lenis = useLenis();
+  const t = useTranslations("about");
 
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -58,10 +56,6 @@ function ProfileGrids() {
     }, 2000);
   };
 
-  const handleContactClick = () => {
-    lenis?.scrollTo("#contact");
-  };
-
   return (
     <section className="mt-20">
       <div className="grid h-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-6">
@@ -69,8 +63,8 @@ function ProfileGrids() {
           <div className="grid-container">
             <ProfileImage src="/assets/grid1.png" alt="grid-1" />
             <div>
-              <p className="grid-headtext">{t('professional.title')}</p>
-              <p className="grid-subtext">{t('professional.description')}</p>
+              <p className="grid-headtext">{t("professional.title")}</p>
+              <p className="grid-subtext">{t("professional.description")}</p>
             </div>
           </div>
         </div>
@@ -79,8 +73,8 @@ function ProfileGrids() {
           <div className="grid-container">
             <ProfileImage src="/assets/grid2.png" alt="grid-2" />
             <div>
-              <p className="grid-headtext">{t('learning.title')}</p>
-              <p className="grid-subtext">{t('learning.description')}</p>
+              <p className="grid-headtext">{t("learning.title")}</p>
+              <p className="grid-subtext">{t("learning.description")}</p>
             </div>
           </div>
         </div>
@@ -102,18 +96,18 @@ function ProfileGrids() {
             </div>
             <div className="flex flex-1 flex-col">
               <div>
-                <p className="grid-headtext">{t('location.title')}</p>
+                <p className="grid-headtext">{t("location.title")}</p>
                 <div className="grid-subtext">
-                  {t('location.description')}
+                  {t("location.description")}
                   <ul className="list-disc pl-5">
-                    <li>{t('location.languages.english')}</li>
-                    <li>{t('location.languages.mandarin')}</li>
-                    <li>{t('location.languages.cantonese')}</li>
+                    <li>{t("location.languages.english")}</li>
+                    <li>{t("location.languages.mandarin")}</li>
+                    <li>{t("location.languages.cantonese")}</li>
                   </ul>
                 </div>
               </div>
               <div className="flex flex-1 items-center max-md:pt-6 md:pt-6">
-                <ContactButton text={t("contact.title")} onClick={handleContactClick} />
+                <DownloadCvButton />
               </div>
             </div>
           </div>
@@ -124,8 +118,8 @@ function ProfileGrids() {
           <div className="grid-container">
             <ProfileImage src="/assets/grid3.png" alt="grid-3" className="sm:h-[266px]" />
             <div>
-              <p className="grid-headtext">{t('passion.title')}</p>
-              <p className="grid-subtext">{t('passion.description')}</p>
+              <p className="grid-headtext">{t("passion.title")}</p>
+              <p className="grid-subtext">{t("passion.description")}</p>
             </div>
           </div>
         </div>
@@ -136,7 +130,7 @@ function ProfileGrids() {
             <ProfileImage src="/assets/grid4.png" alt="grid-4" />
             <div className="absolute inset-x-0 bottom-16 flex w-full justify-center">
               <div>
-                <p className="grid-subtext text-center mb-4">{t('contact.title')}</p>
+                <p className="grid-subtext mb-4 text-center">{t("contact.title")}</p>
                 <div className="copy-container" onClick={handleCopy}>
                   <Image
                     src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}

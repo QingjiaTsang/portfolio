@@ -37,6 +37,14 @@ export default {
       title: "编程热忱",
       description: "我热爱通过代码解决问题和创造价值。编程不仅是我的职业，更是我的热情所在。我专注于编写清晰、可维护的代码，始终遵循最佳实践和设计原则。代码质量和可读性永远是我的首要考虑。",
     },
+    resume: {
+      downloadCv: "下载简历",
+      downloading: "下载中...",
+      downloadSuccess: "简历下载成功 📄",
+      downloadError: "下载失败，请稍后重试 😢",
+      downloadEnglish: "下载英文简历",
+      downloadChinese: "下载中文简历",
+    },
     contact: {
       title: "联系我",
     },

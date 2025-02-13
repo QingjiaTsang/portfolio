@@ -38,6 +38,14 @@ export default {
       title: "我對程式設計的熱情",
       description: "我熱愛通過程式碼解決問題和創造產品。程式設計不僅是我的職業，更是我的熱情所在。我致力於編寫遵循最佳實踐和設計原則的整潔、可維護的程式碼。程式碼質量和可讀性始終是我的首要考慮。",
     },
+    resume: {
+      downloadCv: "下載履歷",
+      downloading: "下載中...",
+      downloadSuccess: "履歷下載成功 📄",
+      downloadError: "下載失敗，請稍後再試 😢",
+      downloadEnglish: "下載英文履歷",
+      downloadChinese: "下載中文履歷",
+    },
     contact: {
       title: "聯絡我",
     },

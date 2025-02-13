@@ -2,7 +2,6 @@ import { About, Contact, Experience, Hero, Tech, Works } from "@/components";
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
-// TODO: add download CV button
 // TODO: add social links (github, linkedin, twitter)
 // TODO: modify metadata of favicon, title, desc, etc.
 // TODO: add sentry to monitor traffic

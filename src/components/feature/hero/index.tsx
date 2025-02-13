@@ -11,7 +11,7 @@ import { increaseHeight, zoomIn } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
-  const t = useTranslations('hero');
+  const t = useTranslations("hero");
 
   return (
     <section className="relative mx-auto h-dvh w-full">
@@ -30,7 +30,7 @@ export function Hero() {
           <h1 className="text-[26px] leading-normal text-white sm:text-4xl md:text-5xl lg:text-6xl">
             <TextGenerateEffect
               segments={[
-                { text: t('greeting'), className: "font-black" },
+                { text: t("greeting"), className: "font-black" },
                 { text: t("name"), className: "text-[#915eff] font-black" },
               ]}
               duration={0.6}
@@ -41,7 +41,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: t('role'),
+                  text: t("role"),
                   className: "text-white",
                 },
               ]}
@@ -50,7 +50,7 @@ export function Hero() {
             <TypewriterEffectSmooth
               words={[
                 {
-                  text: t('description'),
+                  text: t("description"),
                   className: "text-white",
                 },
               ]}

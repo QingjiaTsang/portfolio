@@ -89,6 +89,7 @@ const config: Config = {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         aurora: "aurora 60s linear infinite",
+        shine: "shine 5s linear infinite",
       },
       keyframes: {
         spotlight: {
