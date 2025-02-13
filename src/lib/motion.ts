@@ -1,3 +1,4 @@
+
 type DirectionType = "left" | "right" | "up" | "down";
 type TransitionType = "spring" | "tween" | "inertia";
 
@@ -40,24 +41,51 @@ export function fadeIn(direction: DirectionType, type: TransitionType, delay: nu
   };
 }
 
-export function zoomIn(delay: number, duration: number) {
-  return {
-    hidden: {
-      scale: 0,
-      opacity: 0,
+export const zoomIn = {
+  initial: {
+    scale: 0,
+  },
+  start: (delay: number) => ({
+    scale: 1,
+    transition: {
+      duration: 0.3,
+      type: "spring",
+      delay,
     },
-    show: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "tween" as TransitionType,
-        delay,
-        duration,
-        ease: "easeOut",
-      },
+  }),
+  exit: {
+    scale: 0,
+    transition: {
+      duration: 0.3,
+      type: "spring",
     },
-  };
-}
+  },
+};
+
+export const increaseHeight = {
+  initial: {
+    opacity: 0,
+    scaleY: 0,
+  },
+  start: (delay: number) => ({
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      duration: 2,
+      type: "spring",
+      delay: delay || 0,
+    },
+  }),
+  exit: (delay: number) => ({
+    opacity: 0,
+    scaleY: 0,
+    transition: {
+      duration: 0.75,
+      type: "spring",
+      delay: delay || 0.3,
+    },
+  }),
+};
 
 export function slideIn(direction: DirectionType, type: TransitionType, delay: number, duration: number) {
   return {

@@ -1,8 +1,12 @@
+"use client";
+import { motion } from "framer-motion";
+
 import { ComputersCanvas } from "@/components/canvas/computers";
 import { ScrollIndicator } from "@/components/feature/hero/scroll-indicator";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { styles } from "@/constants";
+import { increaseHeight, zoomIn } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -15,8 +19,8 @@ export function Hero() {
         )}
       >
         <div className="flex flex-col items-center">
-          <div className="size-5 rounded-full bg-[#915eff]" />
-          <div className="violet-gradient h-40 w-1 sm:h-80" />
+          <motion.div className="size-5 rounded-full bg-[#915eff]" variants={zoomIn} initial="initial" animate="start" />
+          <motion.div variants={increaseHeight} custom={1} initial="initial" animate="start" className="violet-gradient h-40 w-1 origin-top sm:h-80" />
         </div>
 
         <div className="flex flex-col">
