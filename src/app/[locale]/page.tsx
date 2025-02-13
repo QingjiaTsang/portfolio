@@ -1,8 +1,7 @@
-import { About, Contact, Experience, Hero, Tech, Works } from "@/components";
+import { About, Contact, Experience, Footer, Hero, Tech, Works } from "@/components";
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
-// TODO: add social links (github, linkedin, twitter)
 // TODO: modify metadata of favicon, title, desc, etc.
 // TODO: add sentry to monitor traffic
 // TODO: do lighthouse SEO testing
@@ -19,6 +18,7 @@ export default function Home() {
       <Experience />
       <Works />
       <Contact />
+      <Footer />
     </div>
   );
 }

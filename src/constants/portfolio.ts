@@ -24,6 +24,7 @@ export const navItems = [
   { name: "Experience", link: "#experience" },
   { name: "Works", link: "#works" },
   { name: "Contact", link: "#contact" },
+  { name: "Socials", link: "#socials" },
 ];
 
 export const tags = [
