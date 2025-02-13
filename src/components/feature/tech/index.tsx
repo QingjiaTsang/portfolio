@@ -1,7 +1,7 @@
 "use client";
 
-import { BallCanvas } from "@/components/canvas";
 import { SectionWrapper } from "@/components/common/section-wrapper";
+import { TechBall } from "@/components/feature/tech/tech-ball";
 import { technologies } from "@/constants";
 import { cn } from "@/lib/utils";
 
@@ -18,14 +18,18 @@ export function TechComponent() {
       </h1>
 
       <div className="mt-4 flex flex-row flex-wrap justify-center gap-10">
-        {technologies.map(technology => (
-          <div className="size-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
+        {technologies.map((technology, index) => (
+          <TechBall
+            key={technology.name}
+            name={technology.name}
+            icon={technology.icon}
+            shadow={technology.shadow}
+            index={index}
+          />
         ))}
       </div>
     </>
   );
-};
+}
 
 export const Tech = SectionWrapper(TechComponent, "tech");

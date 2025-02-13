@@ -49,55 +49,67 @@ export const technologies = [
   {
     name: "TypeScript",
     icon: typescript,
+    shadow: "#1976d2b7",
   },
   {
     name: "React.js",
     icon: reactjs,
+    shadow: "#80deea",
   },
   {
     name: "Next.js",
     icon: nextjs,
+    shadow: "#212121b7",
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    shadow: "#00acc1b7",
   },
   {
     name: "Tanstack Query",
     icon: tanstack_query,
+    shadow: "#ff4154b7",
   },
   {
     name: "Jotai",
     icon: jotai,
+    shadow: "#000000b7",
   },
   {
     name: "Framer motion",
     icon: framer_motion,
+    shadow: "#212121b7",
   },
   {
     name: "Node.js",
     icon: nodejs,
+    shadow: "#43853db7",
   },
   {
     name: "Hono.js",
     icon: honojs,
+    shadow: "#e65100b7",
   },
   {
     name: "Drizzle orm",
     icon: drizzle,
+    shadow: "#cff36d",
   },
   {
     name: "Electron",
     icon: electron,
+    shadow: "#2f3241b7",
   },
-
   {
     name: "Docker",
     icon: docker,
+    shadow: "#2496edb7",
   },
   {
     name: "Supabase",
     icon: supabase,
+    shadow: "#3ecf8eb7",
   },
 ];
 

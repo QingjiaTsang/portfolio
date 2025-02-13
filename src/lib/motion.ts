@@ -78,6 +78,29 @@ export function slideIn(direction: DirectionType, type: TransitionType, delay: n
   };
 }
 
+export const rotateIn = {
+  initial: {
+    rotateX: -30,
+    opacity: 0,
+    y: 50,
+  },
+  enter: (i: number) => ({
+    rotateX: 0,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.1,
+      ease: [0.215, 0.61, 0.355, 1],
+    },
+  }),
+  exit: {
+    rotateX: -30,
+    opacity: 0,
+    y: 50,
+  },
+};
+
 export function staggerContainer(staggerChildren?: number, delayChildren?: number) {
   return {
     hidden: {},
