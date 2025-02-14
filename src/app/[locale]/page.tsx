@@ -2,7 +2,6 @@ import { About, Contact, Experience, Footer, Hero, Tech, Works } from "@/compone
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
-// TODO: modify metadata of favicon, title, desc, etc.
 // TODO: add sentry to monitor traffic
 // TODO: do lighthouse SEO testing
 // TODO: add og image for social platform (low priority)

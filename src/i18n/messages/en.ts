@@ -1,4 +1,14 @@
 export default {
+  metadata: {
+    title: "Qingjia Tsang | Full Stack Developer",
+    description: "Portfolio of Qingjia Tsang - A passionate full stack developer specializing in modern web technologies",
+    keywords: "full stack development,frontend development,React,Next.js,TypeScript",
+    ogTitle: "Qingjia Tsang | Full Stack Developer",
+    ogDescription: "Portfolio of Qingjia Tsang - A passionate full stack developer specializing in modern web technologies",
+    ogImageAlt: "Qingjia Tsang Portfolio",
+    twitterTitle: "Qingjia Tsang | Full Stack Developer",
+    twitterDescription: "Portfolio of Qingjia Tsang - A passionate full stack developer specializing in modern web technologies",
+  },
   hero: {
     greeting: "Hi, I'm",
     name: "Qingjia Tsang",

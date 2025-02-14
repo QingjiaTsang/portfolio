@@ -1,5 +1,15 @@
 /* eslint unicorn/filename-case: "off" */
 export default {
+  metadata: {
+    title: "曾慶嘉 | 全端開發工程師",
+    description: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
+    keywords: "全端開發,前端開發,React,Next.js,TypeScript",
+    ogTitle: "曾慶嘉 | 全端開發工程師",
+    ogDescription: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
+    ogImageAlt: "曾慶嘉的個人作品集",
+    twitterTitle: "曾慶嘉 | 全端開發工程師",
+    twitterDescription: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
+  },
   hero: {
     greeting: "Hi，我是",
     name: "曾慶嘉",
@@ -26,7 +36,7 @@ export default {
     },
     location: {
       title: "我能夠靈活適應不同時區的溝通需求",
-      description: "我目前在中國廣州，可以接受全球遠程工作。",
+      description: "我目前在中國廣州，樂意接受全球遠程工作。",
       languages: {
         english: "🇬🇧 專業英語 (PTE 63) - 程式碼文檔和非同步溝通",
         mandarin: "🇨🇳 母語普通話 - 技術本地化專長",

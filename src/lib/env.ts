@@ -18,6 +18,7 @@ export const env = createEnv({
    * Environment variables only available on server
    */
   server: {
+    NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
     R2_ACCESS_KEY_ID: z.string(),
     R2_SECRET_ACCESS_KEY: z.string(),
     R2_BUCKET_NAME: z.string(),
@@ -28,6 +29,8 @@ export const env = createEnv({
    * Pass environment variables to validation
    */
   runtimeEnv: {
+    NODE_ENV: process.env.NODE_ENV,
+
     NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
     NEXT_PUBLIC_EMAILJS_SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
     NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,

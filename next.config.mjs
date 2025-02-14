@@ -1,4 +1,4 @@
-import createNextIntlPlugin from 'next-intl/plugin';
+import createNextIntlPlugin from "next-intl/plugin";
 
 /*
   Note: the plugin will run like this under the hood, so the request.ts file is required by default

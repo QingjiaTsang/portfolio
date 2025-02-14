@@ -1,5 +1,15 @@
 /* eslint unicorn/filename-case: "off" */
 export default {
+  metadata: {
+    title: "曾庆嘉 | 全栈开发工程师",
+    description: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
+    keywords: "全栈开发,前端开发,React,Next.js,TypeScript",
+    ogTitle: "曾庆嘉 | 全栈开发工程师",
+    ogDescription: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
+    ogImageAlt: "曾庆嘉的个人作品集",
+    twitterTitle: "曾庆嘉 | 全栈开发工程师",
+    twitterDescription: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
+  },
   hero: {
     greeting: "Hi，我是",
     name: "曾庆嘉",
@@ -26,7 +36,7 @@ export default {
     },
     location: {
       title: "灵活的时区沟通与工作地点",
-      description: "我目前在中国广州，可以接受全球远程工作。",
+      description: "我目前在中国广州，乐意接受全球远程工作。",
       languages: {
         english: "🇬🇧 专业英语水平 (PTE 63) - 擅长代码文档编写与异步沟通",
         mandarin: "🇨🇳 中文母语 - 具备技术本地化专长",
