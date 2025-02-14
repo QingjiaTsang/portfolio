@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 
+import { VisitorTrackProvider } from "@/components/provider/visitor-track-provider";
 import { locales } from "@/i18n/config";
 import { env } from "@/lib/env";
 
@@ -27,9 +28,11 @@ export default async function LocaleLayout({
   }
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <VisitorTrackProvider>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </VisitorTrackProvider>
   );
 }
 

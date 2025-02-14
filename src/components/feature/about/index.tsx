@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import ProfileGrids from "@/components/feature/about/profile-grids";
@@ -8,19 +9,17 @@ import { TagCard } from "@/components/feature/about/tag-card";
 import { tags } from "@/constants";
 import { fadeIn, textVariant } from "@/lib/motion";
 
-import { useTranslations } from "next-intl";
-
 export function AboutComponent() {
-  const t = useTranslations('about');
+  const t = useTranslations("about");
 
   return (
     <div>
       <motion.div variants={textVariant(0.5)}>
         <p className="text-[14px] uppercase tracking-wider text-custom-secondary sm:text-[18px]">
-          {t('title')}
+          {t("title")}
         </p>
         <h2 className="text-[30px] font-black text-white xs:text-[40px] sm:text-[50px] md:text-[60px]">
-          {t('subtitle')}
+          {t("subtitle")}
         </h2>
       </motion.div>
 

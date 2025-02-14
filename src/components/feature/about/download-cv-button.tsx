@@ -1,6 +1,7 @@
 "use client";
 
 import { DropdownMenuSeparator } from "@radix-ui/react-dropdown-menu";
+import * as Sentry from "@sentry/nextjs";
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -40,7 +41,7 @@ export function DownloadCvButton({ className }: DownloadCvButtonProps) {
       });
 
       if (!response.ok) {
-        throw new Error("download failed");
+        throw new Error(`Download failed: ${response.status} ${response.statusText}`);
       }
 
       const blob = await response.blob();
@@ -62,6 +63,12 @@ export function DownloadCvButton({ className }: DownloadCvButtonProps) {
     }
     catch (error) {
       console.error("Download error:", error);
+      Sentry.captureException(error, {
+        extra: {
+          language,
+          component: "DownloadCvButton",
+        },
+      });
       toast.error(t("downloadError"));
     }
     finally {

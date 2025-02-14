@@ -1,12 +1,12 @@
 "use client";
 
-import { DownloadCvButton } from "@/components/feature/about/download-cv-button";
 import copy from "copy-to-clipboard";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 
+import { DownloadCvButton } from "@/components/feature/about/download-cv-button";
 import { cn } from "@/lib/utils";
 
 const Globe = dynamic(() => import("react-globe.gl").then(mod => mod.default), {
