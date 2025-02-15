@@ -2,8 +2,6 @@ import { About, Contact, Experience, Footer, Hero, Tech, Works } from "@/compone
 import { FloatingNav } from "@/components/floating-navbar";
 import { navItems } from "@/constants";
 
-// TODO: do lighthouse SEO testing
-// TODO: add og image for social platform (low priority)
 export default function Home() {
   return (
     <div className="relative min-h-dvh bg-custom-primary">

@@ -7,6 +7,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import type { Project } from "@/constants";
+import { useImagePreload } from "@/hooks/use-image-preload";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
@@ -180,6 +181,10 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, link, img, hoverImg, des, iconLists }: ProjectCardProps) {
   const [isHovering, setIsHovering] = useState(false);
+  
+  // preload hoverImg
+  useImagePreload([img, hoverImg || img]);
+
   return (
     <div
       className="flex h-[32rem] w-[80vw] items-center justify-center sm:h-[41rem] sm:w-[570px]"

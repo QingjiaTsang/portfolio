@@ -3,10 +3,13 @@ export default {
   metadata: {
     title: "曾庆嘉 | 全栈开发工程师",
     description: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
-    keywords: "全栈开发,前端开发,React,Next.js,TypeScript",
+    keywords: "全栈开发,前端开发,React,Next.js,TypeScript,Hono.js",
+
+    ogImage: "/assets/og-image-zh-CN.png",
     ogTitle: "曾庆嘉 | 全栈开发工程师",
     ogDescription: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
     ogImageAlt: "曾庆嘉的个人作品集",
+
     twitterTitle: "曾庆嘉 | 全栈开发工程师",
     twitterDescription: "曾庆嘉的个人作品集 - 专注于现代网络技术的全栈开发工程师",
   },
@@ -35,7 +38,7 @@ export default {
       description: "我热衷于跟进最新的技术发展和最佳实践，通过实践项目和研究不断拓展知识领域。",
     },
     location: {
-      title: "灵活的时区沟通与工作地点",
+      title: "我能够灵活适应不同时区的沟通需求",
       description: "我目前在中国广州，乐意接受全球远程工作。",
       languages: {
         english: "🇬🇧 专业英语水平 (PTE 63) - 擅长代码文档编写与异步沟通",

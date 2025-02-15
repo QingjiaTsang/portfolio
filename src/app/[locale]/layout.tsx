@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 
+import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { VisitorTrackProvider } from "@/components/provider/visitor-track-provider";
 import { locales } from "@/i18n/config";
 import { env } from "@/lib/env";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-inter",
+});
 
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
@@ -31,6 +40,7 @@ export default async function LocaleLayout({
     <VisitorTrackProvider>
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
+        <Analytics />
       </NextIntlClientProvider>
     </VisitorTrackProvider>
   );
@@ -88,19 +98,18 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     metadataBase: new URL(
       env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        // TODO: add production url
-        : "https://qingjiatsang.dev",
+        // TODO: update domain later
+        : "https://portfolioqingjiatsang.vercel.app/",
     ),
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
-      // TODO: add production url
-      url: "https://qingjiatsang.dev",
+      // TODO: update domain later
+      url: "https://portfolioqingjiatsang.vercel.app/",
       siteName: "QingjiaTsang",
       images: [
         {
-          // TODO: add og image
-          url: "/assets/og-image.png",
+          url: t("ogImage"),
           width: 1200,
           height: 630,
           alt: t("ogImageAlt"),
@@ -114,8 +123,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       title: t("twitterTitle"),
       description: t("twitterDescription"),
       creator: "@JohnLocke72__",
-      // TODO: add twitter og image
-      images: ["/assets/og-image.png"],
+      images: [t("ogImage")],
     },
   };
 }

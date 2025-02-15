@@ -116,7 +116,11 @@ export function useVisitorTracking() {
       });
     };
 
-    // 收集初始信息
-    collectVisitorInfo();
+    // 延迟收集信息，避免阻塞主线程，提升 lighthouse 性能评分
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(() => collectVisitorInfo());
+    } else {
+      setTimeout(collectVisitorInfo, 2000);
+    }
   }, []);
 }

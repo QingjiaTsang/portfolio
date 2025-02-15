@@ -3,10 +3,13 @@ export default {
   metadata: {
     title: "曾慶嘉 | 全端開發工程師",
     description: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
-    keywords: "全端開發,前端開發,React,Next.js,TypeScript",
+    keywords: "全端開發,前端開發,React,Next.js,TypeScript,Hono.js",
+
+    ogImage: "/assets/og-image-zh-TW.png",
     ogTitle: "曾慶嘉 | 全端開發工程師",
     ogDescription: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
     ogImageAlt: "曾慶嘉的個人作品集",
+
     twitterTitle: "曾慶嘉 | 全端開發工程師",
     twitterDescription: "曾慶嘉的個人作品集 - 專注於現代網路技術的全端開發工程師",
   },
