@@ -44,8 +44,8 @@ export const tags = [
     id: "techEnthusiast",
     icon: techEnthusiast,
   },
-] as const
-export type Tag = (typeof tags)[number]
+] as const;
+export type Tag = (typeof tags)[number];
 
 export const technologies = [
   {
@@ -144,28 +144,28 @@ export const projects = [
     img: "/p1.svg",
     hoverImg: "/p1-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tanstack_query.png", "/tailwindcss.svg", "/shadcn.png", "/framer-motion.svg", "/convex.svg", "/clerk.svg", "/stream.svg"],
-    link: "https://slack.rest",
+    link: "https://slack.qingjiatsang.top",
   },
   {
     id: "estate",
-    img: "/p2.svg", 
+    img: "/p2.svg",
     hoverImg: "/p2-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/framer-motion.svg", "/kinde.svg", "/prisma.svg", "/supabase.svg", "/stripe.svg"],
-    link: "https://property-umber.vercel.app",
+    link: "https://estatehub.qingjiatsang.top",
   },
   {
     id: "note",
     img: "/p3.svg",
     hoverImg: "/p3-hover.svg",
     iconLists: ["/ts.svg", "/nextjs.svg", "/tailwindcss.svg", "/prisma.svg", "/mongodb.svg", "/clerk.svg", "/openai.svg"],
-    link: "https://nextjs-note-taking-chatbot.vercel.app/",
+    link: "https://notebot.qingjiatsang.top",
   },
   {
     id: "cv",
     img: "/p4.svg",
-    hoverImg: "/p4.svg",
+    hoverImg: "/p4-hover.svg",
     iconLists: ["/ts.svg", "/react.svg", "/tanstack.png", "/tailwindcss.svg", "/honojs.png", "/drizzle.svg", "/authjs.webp", "/cloudflare.svg"],
-    link: "coming soon, stay tuned...",
+    link: "https://aicv.qingjiatsang.top",
   },
 ] as const;
-export type Project = (typeof projects)[number]
+export type Project = (typeof projects)[number];

@@ -14,7 +14,7 @@ export function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative mx-auto h-dvh w-full">
+    <section className="relative mx-auto h-dvh w-full transform-gpu">
       <div
         className={cn(
           `${styles.paddingX}`,

@@ -1,13 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { TechBall } from "@/components/feature/tech/tech-ball";
 import { technologies } from "@/constants";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 
 export function TechComponent() {
-  const t = useTranslations('tech');
+  const t = useTranslations("tech");
 
   return (
     <>

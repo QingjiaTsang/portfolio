@@ -21,7 +21,7 @@ export function TechBall({ name, icon, shadow, index }: TechCardProps) {
   const shouldRenderStaticBall = isMobile && !isIOS;
 
   return (
-    <div className="size-28">
+    <div className="size-28 transform-gpu">
       {shouldRenderStaticBall
         ? (
             <div

@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
-import { Tag } from "@/constants";
+import type { Tag } from "@/constants";
+
 import { fadeIn } from "@/lib/motion";
 
-type ServiceCardProps = { index: number, title: string } & Tag
+type ServiceCardProps = { index: number; title: string } & Tag;
 
 export function TagCard({ index, title, icon }: ServiceCardProps) {
   return (

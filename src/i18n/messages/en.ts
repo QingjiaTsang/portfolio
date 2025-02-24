@@ -87,7 +87,7 @@ export default {
   },
   works: {
     title: "Recent Projects",
-    liveSite: "Live Demo",
+    liveSite: "Live Site",
     projects: {
       slack: {
         title: "Slack Clone - Video Call & Real-time Chat Application",

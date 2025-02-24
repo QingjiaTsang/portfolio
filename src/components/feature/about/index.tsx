@@ -37,7 +37,7 @@ export function AboutComponent() {
         </motion.p>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-20 grid transform-gpu grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {tags.map((service, index) => (
           <TagCard
             {...service}

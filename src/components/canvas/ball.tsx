@@ -52,7 +52,6 @@ export function BallCanvas({ icon }: BallProps) {
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
-
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
@@ -64,4 +63,3 @@ export function BallCanvas({ icon }: BallProps) {
     </Canvas>
   );
 }
-
