@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 import type { Project } from "@/constants";
+
 import { useImagePreload } from "@/hooks/use-image-preload";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 
 export function PinContainer({
   children,
@@ -181,7 +182,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, link, img, hoverImg, des, iconLists }: ProjectCardProps) {
   const [isHovering, setIsHovering] = useState(false);
-  
+
   // preload hoverImg
   useImagePreload([img, hoverImg || img]);
 
@@ -222,7 +223,7 @@ function CardContent({ title, des }: { title: string; des: string }) {
       <h1 className="line-clamp-1 text-base font-bold text-white md:text-xl lg:text-2xl">
         {title}
       </h1>
-      <p className="my-1 min-h-[4em] line-clamp-3 text-sm font-light text-[#BEC1DD] lg:text-xl lg:font-normal">
+      <p className="my-1 line-clamp-3 min-h-[4em] text-sm font-light text-[#BEC1DD] lg:text-xl lg:font-normal">
         {des}
       </p>
     </>
@@ -230,7 +231,7 @@ function CardContent({ title, des }: { title: string; des: string }) {
 }
 
 function CardFooter({ iconLists, link }: { iconLists: readonly string[]; link: string }) {
-  const t = useTranslations('works');
+  const t = useTranslations("works");
   return (
     <div className="mb-3 mt-7 flex items-center justify-between">
       <div className="flex items-center">

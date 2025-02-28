@@ -47,8 +47,8 @@ export function DownloadCvButton({ className }: DownloadCvButtonProps) {
       const blob = await response.blob();
 
       const filename = language === "en"
-        ? "QingjiaTsang_resume.pdf"
-        : "曾庆嘉_18011819216.pdf";
+        ? "QingjiaTsang_Frontend_Engineer_Resume.pdf"
+        : "曾庆嘉_React前端 | Nextjs全栈_18011819216.pdf";
 
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");

@@ -24,7 +24,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     id: "LinkedIn",
-    href: "https://www.linkedin.com/in/qingjia-tsang",
+    href: "https://www.linkedin.com/in/qingjiatsang",
     icon: <BsLinkedin color="white" className={iconClassName} />,
   },
   {
