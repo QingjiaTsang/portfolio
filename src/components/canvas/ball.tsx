@@ -24,7 +24,7 @@ function Ball({ icon }: BallProps) {
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
 
-      <Environment preset="dawn" />
+      <Environment files="/hdr/kiara_1_dawn_1k.hdr" />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
