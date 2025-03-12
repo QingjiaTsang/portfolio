@@ -48,7 +48,7 @@ function ProfileGrids() {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    copy("johnlocke123@gmail.com");
+    copy("johnlocke12321@gmail.com");
     setHasCopied(true);
 
     setTimeout(() => {
@@ -141,7 +141,7 @@ function ProfileGrids() {
                     className="size-6 shrink-0"
                   />
                   <p className="text-gray_gradient truncate font-medium text-white md:text-lg lg:text-xl">
-                    johnlocke123@gmail.com
+                    johnlocke12321@gmail.com
                   </p>
                 </div>
               </div>
