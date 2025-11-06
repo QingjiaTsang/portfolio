@@ -30,7 +30,7 @@ export default {
     },
     professional: {
       title: "Professional Experience",
-      description: "With 2.5 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic and responsive websites.",
+      description: "With more than 3 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic and responsive websites.",
     },
     learning: {
       title: "Continuous Learning",

@@ -31,7 +31,7 @@ export default {
     },
     professional: {
       title: "專業經驗",
-      description: "在2.5年的工作經驗中，我在前端和後端開發方面都積累了豐富的經驗，創建了多個動態和響應式網站。",
+      description: "在超過3年的工作經驗中，我在前端和後端開發方面都積累了豐富的經驗，創建了多個動態和響應式網站。",
     },
     learning: {
       title: "持續學習",

@@ -31,7 +31,7 @@ export default {
     },
     professional: {
       title: "专业经验",
-      description: "在2.5年的工作经验中，我在前端和后端开发领域不断提升技能，专注打造动态响应式网站。",
+      description: "在超过3年的工作经验中，我在前端和后端开发领域不断提升技能，专注打造动态响应式网站。",
     },
     learning: {
       title: "持续学习",
